@@ -24,7 +24,7 @@ jobs:
     - name: gradlew 의 root 실행권한을 부여한다.
       run: chmod +x gradlew
     - name: Gradle 을 빌드한다.
-      run: ./gradlew build
+      run: ./gradlew build --stacktrace
     - name: 유닛 테스트를 실행한다.
       run: ./gradlew test
     - name: Print Hello World
