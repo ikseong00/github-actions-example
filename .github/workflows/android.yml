@@ -30,6 +30,12 @@ jobs:
             - name: Print Hello World
               run: echo "Hello World"
 
+            - name: Debug Environment Variables
+              run: |
+                echo "Repository: ${{ github.repository }}"
+                echo "Pull Request Number: ${{ github.event.pull_request.number }}"
+                echo "Actor: ${{ github.actor }}"
+                echo "Event Name: ${{ github.event_name }}"
 
             - name: Close Pull Request on Failure
               if: failure()  # 이전 단계 중 하나라도 실패했을 경우 실행
